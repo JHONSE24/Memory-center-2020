@@ -1,5 +1,5 @@
 import './App.css';
-import FullpageWrapper from './components/Fullpage.js';
+import FullpageWrapper from './components/Fullpage2.js';
 function App() {
   return (
    <div>

@@ -2,6 +2,7 @@ import React from 'react'
 import './card.css';
 const Card = (props) => {
 
+
     
     return(
         <div>
@@ -9,7 +10,7 @@ const Card = (props) => {
         <div className="tarjeta">
             <div className="hexagon">
                         <div className="hexagon-shape">
-                            <a href="/"><img src={props.logo} alt="ft"/></a>
+                            <a href='Fullpage2'><img src={props.logo} alt="ft"/></a>
                             
                         </div>
                     </div>

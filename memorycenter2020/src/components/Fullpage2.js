@@ -23,7 +23,9 @@ import Titulos2 from './Titulos2';
 import Titulos3 from './Titulos3';
 import Parrafos from './Parrafos';
 import Card from './Card.js'
-
+// import ImageSlider from './ImageSlider';
+// import { SliderData } from './SliderData'
+import Deck from './tarjetas'
 
 // import "./styles.css";
 
@@ -37,14 +39,14 @@ class MySection extends React.Component {
   }
 }
 
-const anchors = ["firstPage", "secondPage", "thirdPage", "4Page"];
+const anchors = ["firstPage", "secondPage"];
 
 const FullpageWrapper = () => (
   <ReactFullpage
     anchors={anchors}
     navigation
     navigationTooltips={anchors}
-    sectionsColor={["#0DBFFF", "#620CE8", "#0798ec", "#0DBFFF"]}
+    sectionsColor={["#E8910C", "#E8910C"]}
     onLeave={(origin, destination, direction) => {
       console.log("onLeave event", { origin, destination, direction });
     }}
@@ -53,44 +55,41 @@ const FullpageWrapper = () => (
 
       return (
         <Fragment>
-          <div>
+          
             <MySection content={
               <Fragment>
-                <div className="principal">
-                  <Modelados3d />
-                  <Modelados3d />
-                  <Modelados3d />
-                  <div className="tituloprincipal">
-                    <Titulo1 name='INGENIERÍA en MULTIMEDIA' />
+                
+                  <div className="titulo">
+
+                    <Titulo1 name='TRANSFORMACIÓN DIGITAL' />
+
                   </div>
-                  <Modelados3d />
-                  <Modelados3d />
-                </div>
-              </Fragment>
-            } />
-            <MySection content={
-              <Fragment>
+                  <div className="contcard">
+
+                    <Card name='Programación 1' logo={"https://dam.smashmexico.com.mx/wp-content/uploads/2017/11/aquaman-diferentes-versiones-dc-comics.jpg"} />
+
+                    <Card name='Computación grafica' logo={"https://www.latercera.com/resizer/7vxQViJs1gRx0T1QymHFglA6i1M=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/ZMGEWNUDSVGF7DBK4QPI74GC2Q.jpg"} />
+
+                    <Card name='Programación 3' logo={"https://www.yocomics.com/wp-content/uploads/All-Star-Superman-feature-image.jpg"} />
+
+                  </div>
                 
               </Fragment>
             } />
             <MySection content={
               <Fragment>
-                <div className="areas">
+               
                   <div className="titulover">
-                    <Titulos2 name2='Áreas' />
+                    <Titulo1 name='DOCENTES' />
                   </div>
-                  <div className="hexareas">
-                    <Card name='Área 1' logo={"https://dam.smashmexico.com.mx/wp-content/uploads/2017/11/aquaman-diferentes-versiones-dc-comics.jpg"} />
-                    <Card name='Área 2' logo={"https://www.latercera.com/resizer/7vxQViJs1gRx0T1QymHFglA6i1M=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/ZMGEWNUDSVGF7DBK4QPI74GC2Q.jpg"} />
-                    <Card name='Área 3' logo={"https://www.yocomics.com/wp-content/uploads/All-Star-Superman-feature-image.jpg"} />
-                    <Card name='Área 4' logo={"https://dam.smashmexico.com.mx/wp-content/uploads/2017/11/aquaman-diferentes-versiones-dc-comics.jpg"} />
+                  <div id="root2" className="slidedocentes">
+                    <Deck/>
                   </div>
-                </div>
+               
               </Fragment>
             } />
-            <MySection content={"Hpta!"} />
 
-          </div>
+          
         </Fragment>
       );
     }}
