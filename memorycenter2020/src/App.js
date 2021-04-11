@@ -1,8 +1,9 @@
 import './App.css';
+import FullpageWrapper from './Fullpage.js';
 function App() {
   return (
    <div>
-       Hola
+       <FullpageWrapper/>
    </div>
   );
 }
