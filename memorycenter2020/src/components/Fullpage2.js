@@ -23,11 +23,14 @@ import Titulos2 from './Titulos2';
 import Titulos3 from './Titulos3';
 import Parrafos from './Parrafos';
 import Card from './Card.js'
+import Carro from './carrusel'
+
+
 // import ImageSlider from './ImageSlider';
 // import { SliderData } from './SliderData'
-import Deck from './tarjetas'
 
-// import "./styles.css";
+
+import "./estilosgeneral.css";
 
 class MySection extends React.Component {
   render() {
@@ -47,49 +50,55 @@ const FullpageWrapper = () => (
     navigation
     navigationTooltips={anchors}
     sectionsColor={["#E8910C", "#E8910C"]}
-    onLeave={(origin, destination, direction) => {
-      console.log("onLeave event", { origin, destination, direction });
-    }}
-    render={({ state, fullpageApi }) => {
-      console.log("render prop change", state, fullpageApi); // eslint-disable-line no-console
+
+    render={({ }) => {
+
 
       return (
         <Fragment>
-          
-            <MySection content={
-              <Fragment>
-                
-                  <div className="titulo">
 
-                    <Titulo1 name='TRANSFORMACIÓN DIGITAL' />
+          <MySection content={
+            <Fragment>
+              <div className="superior_">
 
-                  </div>
-                  <div className="contcard">
+              <div className="titulo_">
 
-                    <Card name='Programación 1' logo={"https://dam.smashmexico.com.mx/wp-content/uploads/2017/11/aquaman-diferentes-versiones-dc-comics.jpg"} />
+                <Titulo1 name='TRANSFORMACIÓN DIGITAL' />
 
-                    <Card name='Computación grafica' logo={"https://www.latercera.com/resizer/7vxQViJs1gRx0T1QymHFglA6i1M=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/ZMGEWNUDSVGF7DBK4QPI74GC2Q.jpg"} />
+              </div>
+              <div className="contcard">
 
-                    <Card name='Programación 3' logo={"https://www.yocomics.com/wp-content/uploads/All-Star-Superman-feature-image.jpg"} />
+                <Card name='Programación 1' logo={"https://dam.smashmexico.com.mx/wp-content/uploads/2017/11/aquaman-diferentes-versiones-dc-comics.jpg"} />
 
-                  </div>
-                
-              </Fragment>
-            } />
-            <MySection content={
-              <Fragment>
-               
+                <Card name='Computación grafica' logo={"https://www.latercera.com/resizer/7vxQViJs1gRx0T1QymHFglA6i1M=/900x600/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/ZMGEWNUDSVGF7DBK4QPI74GC2Q.jpg"} />
+
+                <Card name='Programación 3' logo={"https://www.yocomics.com/wp-content/uploads/All-Star-Superman-feature-image.jpg"} />
+
+              </div>
+              </div>
+
+            </Fragment>
+          } />
+
+
+
+          <MySection content={
+            <Fragment>
+              <div className="inferior_">
+                <div className="box">
                   <div className="titulover">
                     <Titulo1 name='DOCENTES' />
                   </div>
-                  <div id="root2" className="slidedocentes">
-                    <Deck/>
-                  </div>
-               
-              </Fragment>
-            } />
+                </div>
+                <div className="carro_fotos">
+                  <Carro></Carro>
+                </div>
+              </div>
 
-          
+            </Fragment>
+          } />
+
+
         </Fragment>
       );
     }}

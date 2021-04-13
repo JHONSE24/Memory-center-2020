@@ -1,0 +1,51 @@
+*
+{
+    border: 0;
+    padding: 0;
+}
+.carro_fotos 
+{
+    width: 500px;
+    height: 500px;
+    border: 3px solid blue;
+}
+.titulover
+{
+    width:1px;
+    word-wrap: break-word;
+    white-space:pre-wrap; 
+    
+   
+}
+   
+.inferior_
+{
+    display: flex;
+    border: 2px solid red;
+    justify-content: space-around;
+}
+.box
+{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.superior_
+{
+    border: 2px solid red;
+}
+.contcard
+{
+    display: flex;
+    border: 2px solid red;
+    justify-content: space-around;
+}
+
+.titulo_
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+

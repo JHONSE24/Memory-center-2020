@@ -88,7 +88,7 @@ const FullpageWrapper = () => (
                 </div>
               </Fragment>
             } />
-            <MySection content={"Hpta!"} />
+            <MySection content={"Personas!"} />
 
           </div>
         </Fragment>
